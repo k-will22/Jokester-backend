@@ -3,5 +3,7 @@ Rails.application.routes.draw do
 
   get "/jokes", to: "jokes#index"
   post "/jokes", to: "jokes#create"
+  get "/favorites", to: "favorites#index"
+  post "/favorites", to: "favorites#create"
 
 end
