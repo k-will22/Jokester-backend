@@ -4,4 +4,9 @@ Rails.application.routes.draw do
   get "/jokes", to: "jokes#index"
   post "/jokes", to: "jokes#create"
 
+  get "/favorites", to: "add_favorites#index"
+  post "favorites", to: "add_favorites#create"
+  delete "/favorites/:id", to: "add_favorites#destroy"
+  get "favorites/:id", to: "add_favorites#show"
+
 end
