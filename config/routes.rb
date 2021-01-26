@@ -3,6 +3,7 @@ Rails.application.routes.draw do
 
   get "/jokes", to: "jokes#index"
   post "/jokes", to: "jokes#create"
+  get "/jokes/:id", to: "jokes#show"
   delete "/jokes/:id", to: "jokes#destroy"
 
   get "/favorites", to: "add_favorites#index"
