@@ -10,6 +10,13 @@ class JokesController < ApplicationController
         render json: joke
     end
 
+    def destroy
+        joke = Joke.find(params[:id])
+        joke.destroy
+        render json: joke
+    end
+
+    
     private
 
     def joke_params

@@ -3,10 +3,11 @@ Rails.application.routes.draw do
 
   get "/jokes", to: "jokes#index"
   post "/jokes", to: "jokes#create"
+  delete "/jokes/:id", to: "jokes#destroy"
 
   get "/favorites", to: "add_favorites#index"
-  post "favorites", to: "add_favorites#create"
+  post "/favorites", to: "add_favorites#create"
   delete "/favorites/:id", to: "add_favorites#destroy"
-  get "favorites/:id", to: "add_favorites#show"
+  get "/favorites/:id", to: "add_favorites#show"
 
 end
