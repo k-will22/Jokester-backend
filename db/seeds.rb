@@ -1,4 +1,4 @@
-Favorite.destroy_all
+AddFavorite.destroy_all
 Joke.destroy_all
 
 

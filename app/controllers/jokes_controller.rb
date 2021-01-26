@@ -5,6 +5,17 @@ class JokesController < ApplicationController
       render json: jokes
     end
 
+    def show 
+        joke = Joke.find(params[:id])
+        render json: joke
+    end
+
+    def destroy
+        joke = Joke.find(params[:id])
+        joke.destroy
+        render json: joke
+    end
+
     def create 
         joke = Joke.create({joke: params[:joke], category: params[:category]})
         render json: joke
