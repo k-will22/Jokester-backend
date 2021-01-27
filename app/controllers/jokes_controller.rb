@@ -21,13 +21,17 @@ class JokesController < ApplicationController
         render json: joke
     end
 
-    def destroy
+    def edit 
         joke = Joke.find(params[:id])
-        joke.destroy
+        render json: joke
+      end
+
+    def update
+        joke = Joke.find(params[:id])
+        joke.update(joke_params)
         render json: joke
     end
 
-    
     private
 
     def joke_params
